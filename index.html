@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FitWiseR AI</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #111827;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+
+            background: #1f2937;
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            text-align: center;
+
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #9ca3af;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .coach-box {
+            min-height: 180px;
+
+            background: #111827;
+
+            border-radius: 15px;
+
+            padding: 25px;
+
+            margin-bottom: 30px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #response {
+            white-space: pre-wrap;
+
+            line-height: 1.6;
+
+            font-size: 18px;
+
+            color: #e5e7eb;
+        }
+
+        #micButton {
+            width: 100%;
+
+            border: none;
+
+            border-radius: 12px;
+
+            padding: 18px;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            background: #2563eb;
+
+            color: white;
+
+            transition: 0.2s;
+        }
+
+        #micButton:hover {
+            background: #1d4ed8;
+        }
+
+        #micButton:disabled {
+            cursor: not-allowed;
+
+            opacity: 0.7;
+        }
+
+        .status {
+            margin-top: 20px;
+
+            color: #9ca3af;
+
+            font-size: 14px;
+        }
+
+        .features {
+            margin-top: 30px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 10px;
+        }
+
+        .feature {
+            background: #374151;
+
+            border-radius: 10px;
+
+            padding: 15px;
+
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🏋️ FitWiseR AI</h1>
+
+        <p class="subtitle">
+            Your AI-powered personal gym coach
+        </p>
+
+
+        <div class="coach-box">
+
+            <div id="response">
+                Hi! I'm your AI gym coach. 👋
+                <br><br>
+                Tap the button and ask me anything about your workout.
+            </div>
+
+        </div>
+
+
+        <!-- IMPORTANT: type="button" prevents page refresh -->
+
+        <button
+            type="button"
+            id="micButton"
+        >
+            🎙️ Talk to Coach
+        </button>
+
+
+        <div class="status">
+            Ask things like:
+            <br>
+            "What did I do last time?"
+            <br>
+            "How much did I bench?"
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+                🧠 AI Coach
+            </div>
+
+            <div class="feature">
+                🗄️ Workout Memory
+            </div>
+
+            <div class="feature">
+                🔊 Voice Response
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
